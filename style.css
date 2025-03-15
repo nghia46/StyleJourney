@@ -49,6 +49,8 @@ nav a{
   display: flex;
   align-items: center;
   color: var(--color-8);
+
+  font-size: 1.5rem;
 }
 nav a:hover{
   background-color: var(--color-3);
@@ -83,7 +85,7 @@ nav li:first-child{
   display: none;
 }
 
-@media (max-width: 450px){
+@media (max-width: 528px){
   .hideOnMobile{
     display: none;
   }
@@ -95,7 +97,6 @@ nav li:first-child{
   .sideNav{
     width: 100%;
   }
-  
 }
 
 .cardList {
