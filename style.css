@@ -9,15 +9,95 @@
   --color-8: #eeffcc;
 }
 
-body {
-  background-color: var(--color-1);
-  color: var(--color-8);
+* {
+  margin: 0;
+  padding: 0;
+
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0;
-  padding: 0;
 }
+
+body {
+  background-color: var(--color-1);
+  color: var(--color-8);
+
+  min-height: 100vh;
+}
+
+nav{
+  background-color: var(--color-2);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;  
+}
+
+nav a{
+  height: 100%;
+  padding: 0 2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--color-8);
+}
+nav a:hover{
+  background-color: var(--color-3);
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+
+.sideNav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 16rem;
+  background-color: #112318e3;
+
+  display: none;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.sideNav li{
+  width: 100%;
+}
+.sideNav a{
+  width: 100%;
+}
+.menu__button{
+  display: none;
+}
+
+@media (max-width: 450px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu__button{
+    display: block;
+  }
+}
+@media (max-width: 400px){
+  .sideNav{
+    width: 100%;
+  }
+  
+}
+
 .cardList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
