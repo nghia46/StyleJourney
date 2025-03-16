@@ -60,6 +60,64 @@ nav li:first-child{
   margin-right: auto;
 }
 
+.searchBar {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0; /* Thêm padding để tránh input bị dính sát viền */
+  margin: 0 auto; /* Canh giữa mặc định */
+}
+
+/* Medium screen (từ 528px trở lên) */
+@media (min-width: 528px) {
+  .searchBar {
+    max-width: 70%; /* Thu hẹp input box trên màn hình lớn hơn */
+    margin: 0 auto; /* Giữ cho nó luôn nằm giữa */
+  }
+}
+
+/* Large screen (từ 1024px trở lên) */
+@media (min-width: 1024px) {
+  .searchBar {
+    max-width: 50%;
+    margin: 0 auto; /* Tăng margin để đẹp hơn trên màn hình lớn */
+  }
+}
+
+.searchBar .search__input{
+  width: 100%;
+  height: 2.5rem;
+
+  font-size: 1.5rem;
+  padding-left: 1rem;
+
+  border: none;
+  outline: none;
+  background: var(--color-8);
+
+
+}
+.searchBar .search__action .search__button{
+  height: 100%;
+  padding : 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-4);
+  cursor: pointer;
+}
+
+@media (max-width: 528px) {
+  .searchBar .search__action .search__button{
+    padding: 0 1rem;
+  }
+}
+.searchBar .search__action .search__button:hover{
+  background-color: var(--color-3);
+}
+.searchBar .search__action .search__button:active{
+  background-color: var(--color-2);
+}
+
 .sideNav{
   position: fixed;
   top: 0;
